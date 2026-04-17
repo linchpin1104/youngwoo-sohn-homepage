@@ -68,6 +68,11 @@ export const dict = {
     'area.bmi': 'Business Model Innovation',
     'area.innovation': 'Innovation Dynamics and its Applications',
 
+    // recent events (home preview)
+    'home.recentEvents.heading': 'Recent Activity',
+    'home.recentEvents.sub': 'Latest snapshots from research, teaching, and industry engagement.',
+    'home.recentEvents.viewAll': 'view_all',
+
     // CTA
     'cta.nowRecruiting': 'now recruiting',
     'cta.joinTitle': 'Join',
@@ -149,6 +154,10 @@ export const dict = {
     'area.datamining': '비선형 데이터마이닝 연구방법론',
     'area.bmi': '비즈니스 모델 혁신',
     'area.innovation': '혁신 동역학과 응용',
+
+    'home.recentEvents.heading': '최근 활동',
+    'home.recentEvents.sub': '연구·강의·산학 협력의 최근 순간들을 담았습니다.',
+    'home.recentEvents.viewAll': '전체_보기',
 
     'cta.nowRecruiting': '구성원 모집중',
     'cta.joinTitle': '함께합시다 —',

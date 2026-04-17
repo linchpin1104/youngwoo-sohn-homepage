@@ -9,7 +9,18 @@ import FadeIn from '@/components/motion/FadeIn';
 import StaggerChildren from '@/components/motion/StaggerChildren';
 import { staggerItem } from '@/components/motion/StaggerChildren';
 import ActivityDashboard from '@/components/ui/ActivityDashboard';
+import EventCard from '@/components/ui/EventCard';
+import { events } from '@/data/events';
 import { useLang } from '@/lib/LanguageProvider';
+
+// Pick top 3 most recent events. Dates may be "YYYY" or "YYYY-MM-DD";
+// normalize to a sortable string so ISO dates sort strictly after "YYYY".
+function eventSortKey(d: string) {
+  return d.length === 4 ? `${d}-01-01` : d;
+}
+const recentEvents = [...events]
+  .sort((a, b) => (eventSortKey(a.date) < eventSortKey(b.date) ? 1 : -1))
+  .slice(0, 3);
 
 const domainColors: Record<string, string> = {
   ai: '#2563EB',
@@ -340,6 +351,46 @@ export default function HomePage() {
               </motion.div>
               );
             })}
+          </StaggerChildren>
+        </div>
+      </section>
+
+      {/* Recent Events preview */}
+      <section className="py-16 md:py-20">
+        <div className="max-w-6xl mx-auto px-6">
+          <FadeIn>
+            <div className="mb-8 flex items-end justify-between flex-wrap gap-4">
+              <div>
+                <div className="text-xs font-mono text-[var(--color-accent)] tracking-widest uppercase mb-2">
+                  {t('section.events')}
+                </div>
+                <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-[var(--color-text-primary)]">
+                  {t('home.recentEvents.heading')}
+                </h2>
+                <p className="mt-2 text-[var(--color-text-secondary)] max-w-2xl">
+                  {t('home.recentEvents.sub')}
+                </p>
+              </div>
+              <Link
+                href="/status-quo"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-sm border border-[var(--color-border-strong)] bg-[var(--color-surface)] text-[var(--color-text-primary)] font-mono text-sm font-medium hover:bg-[var(--color-bg-alt)] transition-colors"
+              >
+                <span className="text-[var(--color-accent)]">$</span>
+                {t('home.recentEvents.viewAll')} →
+              </Link>
+            </div>
+          </FadeIn>
+          <StaggerChildren className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            {recentEvents.map((event) => (
+              <motion.div key={event.id} variants={staggerItem}>
+                <EventCard
+                  title={event.title}
+                  date={event.date}
+                  imageSrc={event.imageSrc}
+                  description={event.description}
+                />
+              </motion.div>
+            ))}
           </StaggerChildren>
         </div>
       </section>
