@@ -141,14 +141,14 @@ export default function HomePage() {
                   <span className="absolute -bottom-2 -left-2 w-4 h-4 border-b-2 border-l-2 border-[var(--color-accent)]" />
                   <span className="absolute -bottom-2 -right-2 w-4 h-4 border-b-2 border-r-2 border-[var(--color-accent)]" />
 
-                  <div className="relative w-64 h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 bg-[var(--color-surface-2)] border border-[var(--color-border)] rounded-md overflow-hidden">
+                  <div className="relative w-[17.5rem] h-[17.5rem] md:w-[19.5rem] md:h-[19.5rem] lg:w-[22rem] lg:h-[22rem] bg-[var(--color-surface-2)] border border-[var(--color-border)] rounded-md overflow-hidden">
                     <Image
                       src={profile.portraitUrl}
                       alt="Youngwoo Sohn portrait"
                       fill
                       priority
-                      sizes="(min-width: 1024px) 320px, 256px"
-                      className="object-contain p-6"
+                      sizes="(min-width: 1024px) 352px, (min-width: 768px) 312px, 280px"
+                      className="object-contain p-5"
                     />
                   </div>
 
