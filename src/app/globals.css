@@ -1,26 +1,198 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Base — cooler, more technical */
+  --color-bg: #F7F7F5;
+  --color-bg-alt: #EFEEEA;
+  --color-surface: #FFFFFF;
+  --color-surface-2: #FAFAF8;
+  --color-border: #E2E0DB;
+  --color-border-hover: #CFCCC5;
+  --color-border-strong: #B5B1A8;
+
+  /* Text */
+  --color-text-primary: #1A1A1A;
+  --color-text-secondary: #4A4A4A;
+  --color-text-tertiary: #8A8A82;
+
+  /* Accent — deep tech green */
+  --color-accent: #1F6B3A;
+  --color-accent-hover: #145028;
+  --color-accent-light: #E3F0E6;
+
+  /* Ink / terminal */
+  --color-ink: #0E0E0E;
+  --color-ink-soft: #1F1F1F;
+  --color-ink-border: #2A2A2A;
+  --color-terminal-green: #39D353;
+
+  /* Contribution heatmap scale (GitHub-style) */
+  --heat-0: #EBEDEF;
+  --heat-1: #9BE39B;
+  --heat-2: #40C463;
+  --heat-3: #30A14E;
+  --heat-4: #216E39;
+
+  /* Domain colors */
+  --color-ai: #2563EB;
+  --color-quantum: #7C3AED;
+  --color-mobility: #059669;
+  --color-bio: #D97706;
+  --color-climate: #0891B2;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-background: var(--color-bg);
+  --color-foreground: var(--color-text-primary);
+  --font-sans: var(--font-pretendard);
+  --font-mono: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, Monaco, Consolas, monospace;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text-primary);
+  font-family: var(--font-pretendard), 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  line-height: 1.65;
+  font-feature-settings: "ss01", "tnum";
+}
+
+/* Mono utility */
+.font-mono {
+  font-family: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, Monaco, Consolas, monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background-color: var(--color-accent);
+  color: white;
+}
+
+*:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Skip to content */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 16px;
+  z-index: 100;
+  padding: 8px 16px;
+  background: var(--color-accent);
+  color: white;
+  border-radius: 0 0 4px 4px;
+  font-size: 0.875rem;
+  transition: top 0.2s;
+}
+.skip-link:focus { top: 0; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: var(--color-bg-alt); }
+::-webkit-scrollbar-thumb {
+  background: var(--color-border-hover);
+  border-radius: 2px;
+  border: 2px solid var(--color-bg-alt);
+}
+::-webkit-scrollbar-thumb:hover { background: var(--color-text-tertiary); }
+
+/* ========== Hi-tech background patterns ========== */
+.bg-grid {
+  background-image:
+    linear-gradient(to right, var(--color-border) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--color-border) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+.bg-grid-dense {
+  background-image:
+    linear-gradient(to right, var(--color-border) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--color-border) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+.bg-dots {
+  background-image: radial-gradient(var(--color-border-hover) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+.bg-grid-fade {
+  mask-image: radial-gradient(ellipse at center, black 40%, transparent 75%);
+  -webkit-mask-image: radial-gradient(ellipse at center, black 40%, transparent 75%);
+}
+
+/* Terminal chrome */
+.terminal-frame {
+  border: 1px solid var(--color-ink-border);
+  background: var(--color-ink);
+  color: #E6E6E6;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.terminal-bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 14px;
+  background: var(--color-ink-soft);
+  border-bottom: 1px solid var(--color-ink-border);
+  font-family: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, monospace;
+  font-size: 12px;
+  color: #8A8A8A;
+}
+.terminal-dot {
+  width: 10px; height: 10px; border-radius: 50%;
+}
+
+/* Blink cursor */
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+.cursor-blink::after {
+  content: "▌";
+  margin-left: 2px;
+  animation: blink 1s step-end infinite;
+}
+
+/* Heatmap cell */
+.heat-cell {
+  width: 11px; height: 11px;
+  border-radius: 2px;
+  display: inline-block;
+  transition: transform 0.15s;
+}
+.heat-cell:hover { transform: scale(1.4); }
+.heat-0 { background: var(--heat-0); }
+.heat-1 { background: var(--heat-1); }
+.heat-2 { background: var(--heat-2); }
+.heat-3 { background: var(--heat-3); }
+.heat-4 { background: var(--heat-4); }
+
+/* Corner brackets for hi-tech frames */
+.tech-frame {
+  position: relative;
+  border: 1px solid var(--color-border-hover);
+}
+.tech-frame::before,
+.tech-frame::after,
+.tech-frame > .corner-tl,
+.tech-frame > .corner-br {
+  content: "";
+  position: absolute;
+  width: 10px; height: 10px;
+  border: 2px solid var(--color-accent);
+}
+.tech-frame::before { top: -2px; left: -2px; border-right: 0; border-bottom: 0; }
+.tech-frame::after  { bottom: -2px; right: -2px; border-left: 0; border-top: 0; }
+
+/* Pulse */
+@keyframes pulse-dot {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(57, 211, 83, 0.5); }
+  50% { box-shadow: 0 0 0 6px rgba(57, 211, 83, 0); }
+}
+.pulse-dot {
+  animation: pulse-dot 2s infinite;
 }
