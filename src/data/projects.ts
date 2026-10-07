@@ -13,6 +13,66 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: 101,
+    title:
+      "머신러닝 자동화 분석을 위한 AI 모델링 전 과정을 수행하는 양자-고전 하이브리드 알고리즘 원천기술 (TIPS)",
+    titleEn:
+      "Quantum–Classical Hybrid Algorithm for End-to-End Automated ML Modeling (TIPS)",
+    funder: "창업성장기술개발사업, 중소벤처기업부 (MSS)",
+    yearStart: 2024,
+    yearEnd: 2026,
+  },
+  {
+    id: 102,
+    title: "시니어 여성들의 인공지능 움직임 코칭을 위한 글로벌 플랫폼 기술 개발",
+    titleEn:
+      "Global Platform for AI-Based Movement Coaching for Senior Women",
+    funder: "중소벤처기업부 (MSS)",
+    yearStart: 2025,
+  },
+  {
+    id: 103,
+    title: "인공지능을 활용한 의류 원단 추천 플랫폼 상용화 기술 연구개발",
+    titleEn:
+      "AI-Based Textile Recommendation Platform Commercialization R&D",
+    funder: "중소벤처기업부 (MSS)",
+    yearStart: 2024,
+    yearEnd: 2025,
+  },
+  {
+    id: 104,
+    title: "SK Hynix Marketplace Business Simulation (신입사원 교육 및 지도)",
+    titleEn: "SK Hynix Marketplace Business Simulation — New Hire Program",
+    funder: "SK Hynix",
+    yearStart: 2026,
+    yearEnd: "ongoing",
+  },
+  {
+    id: 105,
+    title: "CMK 정몽구재단, 그린소사이어티 프로그램 (기후기술 스타트업 사업화 교육 및 지도)",
+    titleEn:
+      "Green Society — Climate-Tech Startup Commercialization Program",
+    funder: "CMK 정몽구재단 (Chung Mong-Koo Foundation)",
+    yearStart: 2024,
+    yearEnd: "ongoing",
+  },
+  {
+    id: 106,
+    title: "포스텍 영재기업인교육원 (Kauffman PEV Program 강의)",
+    titleEn: "POSTECH Youth Entrepreneur Academy (Kauffman PEV)",
+    funder: "POSTECH",
+    yearStart: 2023,
+    yearEnd: "ongoing",
+  },
+  {
+    id: 107,
+    title: "POSCO 미래사업가양성과정",
+    titleEn: "POSCO Future Entrepreneur Program",
+    funder: "POSCO",
+    yearStart: 2022,
+    yearEnd: "ongoing",
+  },
+  {
     id: 1,
     title: "과학기술사업화진흥원(과기부), 지역과학기술성과 실용화지원사업",
     titleEn: "Regional Science & Technology Commercialization Support",

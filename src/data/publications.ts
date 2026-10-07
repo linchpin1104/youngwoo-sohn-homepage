@@ -31,11 +31,147 @@ export interface BookChapter {
 
 export const journalPapers: JournalPaper[] = [
   {
-    id: 1,
+    id: 101,
     title:
       "Empirical Validation of Information, Service, and Personal Characteristics Influencing Adoption Intentions of Generative AI Services: A Focus on ChatGPT",
-    journal: "Telematics and Informatics",
+    journal: "Asia Pacific Journal of Information Systems",
+    volume: "36",
+    issue: "3",
+    year: 2026,
+    month: "September",
+  },
+  {
+    id: 102,
+    title:
+      "Effect of Team Diversity and Social Capital of Laboratory Start-Up on Performance: Focusing on I-Corps",
+    journal: "Engineering Management Journal",
+    year: 2026,
+    month: "March",
+    status: "Accepted, SSCI",
+  },
+  {
+    id: 103,
+    title:
+      "A Study on Innovation Intermediary Role Models for Open Innovation: Focusing on Resource Dependence Theory and Core Competence Theory",
+    journal: "Journal of Technology Innovation",
+    volume: "34",
+    issue: "31",
+    year: 2026,
+    month: "March",
+  },
+  {
+    id: 104,
+    title:
+      "A Case Study on Duolingo's Open Innovation Applying the Zone of Proximal Development (ZPD) Theory",
+    journal: "Journal of Management & Economics",
+    volume: "47",
+    issue: "4",
+    year: 2025,
+    month: "November",
+  },
+  {
+    id: 105,
+    title:
+      "A Study on the Influence of Founder Characteristics and Mentoring Factors on Entrepreneurial Satisfaction from a Social Learning Theory Perspective",
+    journal:
+      "The Journal of Korean Career·Entrepreneurship & Business Association",
+    volume: "9",
+    issue: "6",
+    year: 2025,
+    month: "November",
+  },
+  {
+    id: 106,
+    title:
+      "Korean Automakers' Approach to Responsible Innovation in AAM Development Through Open Innovation",
+    journal: "Journal of Management and Economics",
+    volume: "13",
+    issue: "3",
+    year: 2025,
+    month: "August",
+  },
+  {
+    id: 107,
+    title:
+      "Economic Feasibility of Sustainable Aviation Fuel Adoption by Airline Size and Government Incentives",
+    journal: "Journal of The Korean Society of Industry Convergence",
+    volume: "25",
+    issue: "1",
+    year: 2025,
+    month: "June",
+  },
+  {
+    id: 108,
+    title:
+      "Study on the Role of Innovation Intermediaries in Open Innovation: From the Perspective of Resource Dependence Theory and Core Competency Theory",
+    journal: "Asian Journal of Innovation and Policy",
+    volume: "13",
+    issue: "3",
     year: 2024,
+    month: "December",
+  },
+  {
+    id: 109,
+    title:
+      "Human Capital Signals, Network Position, and Digital Reputation in an Entrepreneurial Mentoring Platform",
+    journal: "Asia-Pacific Journal of Business Venturing and Entrepreneurship",
+    year: 2026,
+    status: "Under Review, KCI",
+  },
+  {
+    id: 110,
+    title:
+      "Demonstration of Obstacle Avoidance and Autonomous Flight Based on Monocular Vision and Domestically Produced On-Device AI",
+    journal: "Journal of the Korean Society of Industry Convergence",
+    year: 2026,
+    status: "Under Review, KCI",
+  },
+  {
+    id: 111,
+    title:
+      "Development of a Methodology for Quantifying Greenhouse Gas Emission Reductions from the Selective Collection and Material Recycling of Post-Consumer Paper Cups",
+    journal: "Journal of Climate Change Research",
+    year: 2026,
+    status: "Under Review, KCI",
+  },
+  {
+    id: 112,
+    title:
+      "When Patents Don't Pay: Scaling Signals and the Reconfiguration of Venture Capital Screening in Korea",
+    journal: "Asian Business & Management",
+    year: 2026,
+    status: "Under Review, SSCI",
+  },
+  {
+    id: 113,
+    title:
+      "Team Characteristics, Social Capital, and Founder's Experience: Drivers of Startup Performance in Technology-Based Startups",
+    journal: "R&D Management",
+    year: 2026,
+    status: "Under Review, SSCI",
+  },
+  {
+    id: 114,
+    title:
+      "Predicting Series B Funding Success Using Machine Learning: Insights for Sustainable Corporate Practices in Digital Transformation",
+    journal: "Systems",
+    year: 2026,
+    status: "Under Review, SSCI",
+  },
+  {
+    id: 115,
+    title:
+      "Can Museums Innovate Without Losing Their Identity? Exploring the National Museum of Korea Case",
+    journal: "Curator",
+    year: 2026,
+    status: "Under Review, AHCI",
+  },
+  {
+    id: 116,
+    title:
+      "Integrated Multi-Attribute Weighted Analysis Process Development for NPD Phase of a Manufacturing Startup",
+    journal: "Asian Business & Management",
+    year: 2026,
     status: "Under Review, SSCI",
   },
   {
@@ -211,6 +347,62 @@ export const journalPapers: JournalPaper[] = [
 ];
 
 export const conferencePapers: ConferencePaper[] = [
+  {
+    id: 101,
+    title:
+      "Analyzing Startup Investment Success Paths Based on Market Environment and Business Maturity: Focusing on Signal-Based Clustering and State Transition Analysis",
+    venue: "한국경영학회 융합학술대회",
+    date: "2026-08",
+  },
+  {
+    id: 102,
+    title: "Quantum TECH & Business @Sejong",
+    venue: "중부권 과학기술혁신포럼",
+    date: "2026-08",
+  },
+  {
+    id: 103,
+    title: "Food Tech Robot",
+    venue: "World Food Tech 2026 ConfEx, KINTEX",
+    date: "2026-06",
+  },
+  {
+    id: 104,
+    title:
+      "Connection vs. Collaboration: An Exploratory Study of Innovation Intermediary Types and Startup Growth Patterns in AI-Driven Open Innovation",
+    venue: "International R&D Management Workshop",
+    date: "2026-05",
+  },
+  {
+    id: 105,
+    title: "Lab to Market 실험실 창업기업의 성과 지원 세션 좌장",
+    venue: "창업관련학회 춘계통합학술대회",
+    date: "2026-04",
+  },
+  {
+    id: 106,
+    title: "Quantum Tech & Business 양자산업의 현재와 미래",
+    venue: "반도체물리학부 콜로퀴움, 고려대학교",
+    date: "2026-03",
+  },
+  {
+    id: 107,
+    title: "AI x ESG Transforming Sustainability & Corporate Responsibility",
+    venue: "Global ESG Conference",
+    date: "2025-06",
+  },
+  {
+    id: 108,
+    title: "Pivot or Die 양자택일, 그리고 양자산업",
+    venue: "피봇팅 지원 사업 성과공유, DSC 모빌리티 사업단",
+    date: "2025-02",
+  },
+  {
+    id: 109,
+    title: "기업가정신과 과학기술실용화 (고려대학교 첨단기술비즈니스학과 세션) 좌장",
+    venue: "기업가정신학회 추계학술대회",
+    date: "2024-10",
+  },
   {
     id: 1,
     title: "Applied AI @Business",

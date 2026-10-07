@@ -42,12 +42,13 @@ export interface Profile {
 
 export const profile: Profile = {
   name: "Youngwoo Sohn",
-  title: "Assistant Professor",
-  department: "Department of Future Science & Technology Business",
+  title: "Associate Professor",
+  department: "Department of Future Science & Technology Business · Graduate School of Management of Technology",
   university: "Korea University Graduate School",
   bio: [
-    "I am an associate professor in the department of Future Science & Technology Business at Korea University Graduate School. My research areas include Commercialization for Advanced Technology, Research Methodology using Non-linear Datamining, Business Model Innovation, and Innovation Dynamics and its Applications.",
-    "I received M.S. in Management Engineering from KAIST and Ph.D. in Business Administration from KUBS. I worked as a Research Fellow at Daewoo Economic Research Institute, LG CNS, and POSCO Research Institute from 1996 to 2012. Subsequently, I served at POSTECH in various roles including research associate professor and director of the I-Corps Program from 2012 to 2023, before joining Korea University.",
+    "I am an Associate Professor jointly appointed to the Department of Future Science & Technology Business and the Graduate School of Management of Technology at Korea University. My research covers Commercialization for Advanced Technology, Research Methodology using Non-linear Datamining, Business Model Innovation, and Innovation Dynamics and its Applications.",
+    "I received M.S. in Management Engineering from KAIST and Ph.D. in Business Administration from KUBS. I worked as a Research Fellow at Daewoo Economic Research Institute, LG CNS, and POSCO Research Institute from 1996 to 2012. I then served at POSTECH from 2012 to 2023 in various roles including Professor at the Graduate School of Artificial Intelligence and Director of the POSTECH Entrepreneurship Center, before joining Korea University.",
+    "I also serve as Adjunct Professor at POSTECH's School of Convergence Science and Technology (2024~) and as a Committee Member of the Korea Exchange Listing Disclosure Committee (2026~). I chaired the Seoul Quantum Campus (SQC) Committee of the Seoul Metropolitan Government in 2024.",
     "I am leading Advanced Technology Commercialization LAB (atCL) at Korea University.",
   ],
   recruitmentText: "I am actively looking for outstanding graduate and undergraduate students and postdoctoral researchers for the projects listed below. When you contact me, please include an up-to-date CV and what project(s) in our group you are interested in.",

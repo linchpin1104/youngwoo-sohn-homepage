@@ -13,7 +13,7 @@ export const dict = {
     'nav.contact': 'contact',
 
     // hero / home
-    'home.title': 'Assistant Professor',
+    'home.title': 'Associate Professor',
     'home.terminal.whoami': 'whoami',
     'home.terminal.role': 'cat role.txt',
     'home.terminal.lab': 'ls lab/',
@@ -106,7 +106,7 @@ export const dict = {
     'nav.status': '현황',
     'nav.contact': '연락처',
 
-    'home.title': '조교수',
+    'home.title': '부교수',
     'home.terminal.whoami': 'whoami',
     'home.terminal.role': 'cat 직함.txt',
     'home.terminal.lab': 'ls 연구실/',
